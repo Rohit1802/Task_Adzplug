@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,100;1,200;1,300;1,400&family=Nunito:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #1adb80;
+    --header-color: #fff;
+    --primary-text-color: #556677;
+    --secondary-text-color:#000000C4;
+    --background: linear-gradient(to bottom, #ffffff, #dff1e9);
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: var(--primary-text-color);
+    overflow-x: hidden;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.wrapper{
+    background: linear-gradient(to right, #00031d, #000536);
+    height: 100vh;
+}
+
+
+nav{
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav .main-nav .company-logo img{
+    width: 40px;
+}
+
+/* 452301f24dmsh6eaae8411a5cef0p11d634jsnd7e85c545154 */
+
+nav .main-nav ul{
+    display: flex;
+    gap: 40px;
+}
+
+nav .main-nav .nav-item{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color:rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+nav .main-nav .nav-item:hover{
+    color: var(--header-color);
+}
+
+.hero{
+    padding-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .header-content h1{
+    color: var(--header-color);
+    font-size: 3rem;
+}
+
+.hero .header-content h4{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    padding: 2rem 0;
+    font-weight: 300;
+}
+
+.hero .button-group{
+    display: flex;
+    gap: 30px;
+    font-weight: 100;
+}
+
+.hero .button-group .btn-primary{
+    color: #393939;
+    border: none;
+    outline: none;
+    padding: 1.2rem 2rem;
+    width: 220px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.hero .button-group .btn-primary:hover{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+    background-color: #19ea89;
+    color:#222222;
+}
+
+.hero .header-img img{
+    z-index: 100;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0rem;
+    height: 4rem;
+    width: 100%;
+    left: 0;
+    background-size: 100rem 11rem;
+    background: url(./assets/wave.png);
+    animation: waves 20s linear infinite;
+}
+.wave2{
+    opacity: 0.2;
+    animation-duration: 4s;
+    animation: reverse;
+}
+
+.wave3{
+    opacity: 0.3;
+    animation-duration: 8s;
+}
+
+.wave4{
+    opacity: 0.4;
+    animation-duration: 8s;
+    animation: reverse;
+}
+
+.wave5{
+    opacity: 0.5;
+    animation-duration: 16s;
+}
+
+@keyframes waves{
+    0%{
+        background-position-x:0 ;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    margin: 0 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #4fc3dc44,
+    0 0 50px #fff,
+    0 0 100px #fff;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i)) ;
+}
+
+.bubbles span:nth-child(even){
+    width: 3px;
+    height: 3px;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(90vh);
+    }
+}
